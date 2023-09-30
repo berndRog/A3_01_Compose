@@ -1,6 +1,5 @@
 package de.rogallab.mobile.ui.composables
 
-import android.util.Log
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Column
@@ -18,20 +17,19 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import de.rogallab.mobile.logDebug
 
 @Composable
 fun CountScreen1() {
 
 // val mCount:MutableState<Int> = remember { mutableStateOf(0) }
-   var count by remember { mutableStateOf<Int>(0) }
+   var count by remember { mutableStateOf(0) }
 
    Column(modifier = Modifier
       .padding(all = 8.dp)
       .fillMaxSize()
    ) {
-
-
-      Log.d("ok>Count1Screen1      .","Composition count:$count")
+      logDebug("ok>Count1Screen1      .","Composition count:$count")
 
       Text(
 //       text = mCount.value.toString(),  // getter
@@ -52,7 +50,6 @@ fun CountScreen1() {
          modifier = Modifier
             .padding(vertical = 8.dp)
             .fillMaxWidth()
-
       ) {
          Text (
             text = "Hochzählen"

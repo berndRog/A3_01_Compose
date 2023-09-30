@@ -21,20 +21,23 @@ class MainActivity : BaseActivity(TAG) {
 
       setContent {
 
-         AppTheme() {
+         AppTheme {
             Surface(
                modifier = Modifier.fillMaxSize(),
                color = MaterialTheme.colorScheme.background) {
 
                val name by remember { mutableStateOf("") }
-               Log.d("ok>ComposeView        .", "Composition {$name}")
+               logDebug("ok>ComposeView        .", "Composition {$name}")
                CountScreen1()
             }
          }
       }
    }
 
-   companion object {        //12345678901234567890123
+   companion object {
+      const val isInfo = true
+      const val isDebug = true
+      //12345678901234567890123
       private const val TAG = "ok>MainActivity       ."
    }
 }

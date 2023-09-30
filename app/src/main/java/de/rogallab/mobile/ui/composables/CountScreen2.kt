@@ -18,6 +18,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import de.rogallab.mobile.logInfo
 
 @Composable
 fun CountScreen2() {
@@ -29,7 +30,7 @@ fun CountScreen2() {
       .fillMaxSize()
    ) {
 
-      Log.d("ok>Count1Screen2      .","Composition count:$count")
+      logInfo("ok>Count1Screen2      .","Composition count:$count")
 
       Text(
          text = count.toString(),  // getter
